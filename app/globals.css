@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Neumorphism Utilities */
+@layer utilities {
+  /* Light mode neomorphic utilities */
+  .neu-flat {
+    box-shadow: 8px 8px 16px #d1d5db, -8px -8px 16px #ffffff;
+  }
+  
+  .neu-flat-sm {
+    box-shadow: 4px 4px 8px #d1d5db, -4px -4px 8px #ffffff;
+  }
+  
+  .neu-flat-lg {
+    box-shadow: 12px 12px 24px #d1d5db, -12px -12px 24px #ffffff;
+  }
+  
+  .neu-pressed {
+    box-shadow: inset 4px 4px 8px #d1d5db, inset -4px -4px 8px #ffffff;
+  }
+  
+  .neu-pressed-sm {
+    box-shadow: inset 2px 2px 4px #d1d5db, inset -2px -2px 4px #ffffff;
+  }
+  
+  .neu-pressed-lg {
+    box-shadow: inset 6px 6px 12px #d1d5db, inset -6px -6px 12px #ffffff;
+  }
+  
+  /* Blue accent neomorphic utilities */
+  .neu-blue {
+    box-shadow: 6px 6px 12px #1e40af, -6px -6px 12px #3b82f6;
+  }
+  
+  .neu-blue-pressed {
+    box-shadow: inset 3px 3px 6px #1e40af, inset -3px -3px 6px #3b82f6;
+  }
+  
+  /* Dark mode neomorphic utilities */
+  .dark .neu-flat-dark {
+    box-shadow: 8px 8px 16px #0f172a, -8px -8px 16px #334155;
+  }
+  
+  .dark .neu-flat-dark-sm {
+    box-shadow: 4px 4px 8px #0f172a, -4px -4px 8px #334155;
+  }
+  
+  .dark .neu-flat-dark-lg {
+    box-shadow: 12px 12px 24px #0f172a, -12px -12px 24px #334155;
+  }
+  
+  .dark .neu-pressed-dark {
+    box-shadow: inset 4px 4px 8px #0f172a, inset -4px -4px 8px #334155;
+  }
+  
+  .dark .neu-pressed-dark-sm {
+    box-shadow: inset 2px 2px 4px #0f172a, inset -2px -2px 4px #334155;
+  }
+  
+  .dark .neu-pressed-dark-lg {
+    box-shadow: inset 6px 6px 12px #0f172a, inset -6px -6px 12px #334155;
+  }
+}
